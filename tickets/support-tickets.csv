@@ -1,0 +1,21 @@
+ticket_id,title,customer_report,category_hint,environment,expected_behavior,actual_behavior
+SUP-001,Password reset loop,"I reset my password but it keeps sending me back to reset it again.",login,Chrome 152 / Windows 11,User reaches dashboard after successful reset,User is redirected to reset-password again
+SUP-002,Duplicate subscription charge,"I only bought one Pro plan but my card shows two charges.",billing,Web checkout / Visa test flow,One successful purchase creates one charge,Retry after timeout can create two successful charges
+SUP-003,Save button missing on mobile,"I can't save my profile on my phone.",ui,Chrome Android / 360x800,Save action remains reachable on supported mobile viewport,Save button is rendered outside viewport
+SUP-004,Restricted billing page visible,"A normal team member can open our billing details from an old link.",permissions,Web app / member role,Non-billing members cannot access billing details,Direct URL returns billing page content
+SUP-005,CSV export date format wrong,"Our export changed dates to US format.",export,Web app / pt-BR workspace,Export follows workspace locale,Dates export as MM/DD/YYYY
+SUP-006,Invite email not received,"I invited a teammate three times and nothing arrived.",email,Gmail recipient,Valid invite triggers delivery,Message delayed by provider spam filtering
+SUP-007,Dark mode request,"Can you add automatic dark mode based on my system setting?",feature,Web app,Requested capability does not exist,Only manual theme switch exists
+SUP-008,Dashboard slow after login,"The dashboard takes almost a minute to load today.",performance,Production / multiple accounts,Dashboard loads within normal baseline,API latency elevated across accounts
+SUP-009,Wrong timezone in activity log,"Events are five hours off for our Brazil team.",localization,America/Sao_Paulo workspace,Activity log uses workspace timezone,Log renders UTC timestamps
+SUP-010,Can't delete workspace,"The delete button does nothing.",workspace,Safari 26 / macOS,Confirmation modal appears,Click blocked by content blocker extension
+SUP-011,Need SSO with another provider,"We need Okta SAML before rollout.",feature,Enterprise workspace,Requested integration available,Only Google and Azure SSO are currently supported
+SUP-012,Invoice download returns 500,"Downloading our August invoice gives an error.",billing,Production / invoice INV-8821,Invoice PDF downloads successfully,Request returns HTTP 500 for one generated invoice
+SUP-013,Search finds deleted projects,"Deleted projects still appear in search.",search,Web app / production,Deleted projects are excluded from search,Search index still returns deleted records for up to 10 minutes
+SUP-014,Two-factor code rejected,"My authenticator code is always invalid.",auth,iPhone authenticator / web app,Valid current TOTP code is accepted,Device clock is 4 minutes out of sync
+SUP-015,Attachment upload hangs,"A 45 MB PDF never finishes uploading.",upload,Firefox / 45 MB PDF,File within documented limit uploads,Upload stalls at 99 percent for PDFs above ~40 MB
+SUP-016,Keyboard shortcut request,"Can we get a shortcut to create a ticket from anywhere?",feature,Web app,Requested capability does not exist,No global create-ticket shortcut exists
+SUP-017,Notification preferences reset,"My email notification settings keep turning back on.",settings,Web app / user settings,Saved preferences persist across sessions,Preferences revert after organization policy sync
+SUP-018,Login occasionally fails,"Sometimes I get a blank page after sign in but I can't make it happen now.",login,Chrome / production,Successful sign-in loads dashboard,Intermittent blank page reported without request ID
+SUP-019,API returns 503,"Our integration started getting 503s this morning.",api,Production API / multiple customers,API requests return normal success responses,Shared dependency outage causes elevated 503 responses
+SUP-020,Avatar looks blurry,"My profile photo looks a little blurry in the sidebar.",ui,Retina display / web app,Avatar renders crisply at supported sizes,32px thumbnail appears soft on high-DPI displays
