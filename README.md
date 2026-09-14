@@ -2,6 +2,8 @@
 
 A hands-on portfolio project that simulates a SaaS support operation and demonstrates how customer-reported problems move from first contact to investigation, bug triage, engineering handoff, retest, and customer communication.
 
+**Project page:** https://guilhermetavo.github.io/customer-support-qa-lab/
+
 ## Project goal
 
 The goal of this lab is to show a practical QA + Technical Support workflow rather than a collection of isolated test cases. The project focuses on turning incomplete customer reports into reproducible technical evidence and clear next actions.
@@ -83,6 +85,7 @@ A user with a non-billing role can open a billing details endpoint from a previo
 
 ## Quick links
 
+- [Project page](https://guilhermetavo.github.io/customer-support-qa-lab/)
 - [Triage playbook](triage-playbook.md)
 - [Support tickets](tickets/support-tickets.csv)
 - [Triage results](results/triage-results.csv)
